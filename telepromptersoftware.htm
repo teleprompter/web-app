@@ -21,6 +21,7 @@
 		<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/redmond/jquery-ui.css" />
 		<link rel="stylesheet" href="css/style.css?v=0.6.1">
 		<link href="/css/all.css" rel="stylesheet"> <!--load all styles -->
+		<link href="/css/responsive.css" rel="stylesheet"> <!--load the responsive overrides -->
 		
 		<script src="https://kit.fontawesome.com/650710d258.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="css/font-awesome.min.css">
@@ -141,70 +142,5 @@ a:hover, a:active, a:focus {
 		<script src="js/jquery.cookie.js"></script>
         <script src="js/jscolor.js"></script>
 		<script src="js/script.js?v=0.6.2"></script>
-		<style>
-			/* override styles */
-
-			/* elements with this class will only be visible on small screens */
-			.mobile-only {
-				display: none;
-			}
-			/* small screen -> mobile phones and portrait tablets */
-			@media screen and (max-width: 768px) {
-				.mobile-only {
-					display: initial;
-				}
-
-				#teleprompter {
-					padding-left: 40px !important;	
-					padding-right: 40px !important;	
-				}
-
-				header {
-					overflow: hidden;
-				}
-
-				/* make the h1 flex and better align child elements  */
-				header h1 {
-					width: 100%;
-					float: none;
-					text-align: center;
-					display: flex;
-					align-items: baseline;
-					text-indent: 15px;
-				}
-
-				header h1 span.clock {
-					padding: 0;
-				}
-
-				/* make the nav full width */
-				header nav {
-					width: 100%;
-				}
-				
-				/* move this one row up, into the menubar */
-				.button.play {
-					position: absolute;
-					top: 0;
-				}
-				
-				/* this is a new added item that toggles the menu */
-				.mobile-menu-toggle {
-					position: absolute;
-					top: 0;
-					right: 10px;
-					transition: all 120ms ease;
-				}
-
-				header.expanded {
-					height: auto;
-				}
-
-				header.expanded .mobile-menu-toggle {
-					transform: rotate(180deg);
-				}
-			}
-		</style>
-		
 	</body>
 </html>
