@@ -29,14 +29,14 @@ $(function() {
 
 	// nsk code start here
 	// Listen for open Button Click
-	$('.button.open').click(function(){
+	$('.button.open').click(function(evt){
 		$('.load-file').trigger('click');
 		evt.preventDefault();
 		evt.stopPropagation();
 		return false;
 	});
 
-	$('.button.save').click(function(){
+	$('.button.save').click(function(evt){
 		saveTextAsFile();
 		evt.preventDefault();
 		evt.stopPropagation();
