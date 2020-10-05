@@ -54,15 +54,20 @@ a:hover, a:active, a:focus {
 	</head>
 	<body id="gui">
 		<header>
-			<h1><a href="voice-activated-teleprompter/"><i class="fas fa-microphone active"></i></a><i class="fal fa-clock play"></i> <span class="clock">00:00:00</span></h1>
+			<h1>
+				<a href="voice-activated-teleprompter/">
+					<i class="fas fa-microphone active"></i>
+				</a>
+				<i class="fal fa-clock play"></i>
+				<span class="clock">00:00:00</span>
+			</h1>
 			<nav>
                 <div class="buttons">
-					
-					
 					<a class="button small fad fa-undo reset" href="#" onclick="return false;"></a>
 					<a class="button small fal fa-text-width flipx" href="#" onclick="return false;"></a>
 					<a class="button small fal fa-text-height flipy" href="#" onclick="return false;"></a>
 					<a class="button icon-play play active" href="#" onclick="return false;"></a>
+					<a class="button mobile-only mobile-menu-toggle fad fa-chevron-down" title="toggle menu" href="#" onclick="$('header').toggleClass('expanded'); return false;"></a>
 					<a class="button fad fa-folder-open open active" href="#" onclick="return false;"></a>
 					<a class="button fal fa-save save active" href="#" onclick="return false;"></a>
 					<span style="display: none;"><input type='file' class="load-file" accept='.txt' onchange='openFile(event)'></span>
@@ -139,11 +144,64 @@ a:hover, a:active, a:focus {
 		<style>
 			/* override styles */
 
+			/* elements with this class will only be visible on small screens */
+			.mobile-only {
+				display: none;
+			}
 			/* small screen -> mobile phones and portrait tablets */
 			@media screen and (max-width: 768px) {
+				.mobile-only {
+					display: initial;
+				}
+
 				#teleprompter {
 					padding-left: 40px !important;	
 					padding-right: 40px !important;	
+				}
+
+				header {
+					overflow: hidden;
+				}
+
+				/* make the h1 flex and better align child elements  */
+				header h1 {
+					width: 100%;
+					float: none;
+					text-align: center;
+					display: flex;
+					align-items: baseline;
+					text-indent: 15px;
+				}
+
+				header h1 span.clock {
+					padding: 0;
+				}
+
+				/* make the nav full width */
+				header nav {
+					width: 100%;
+				}
+				
+				/* move this one row up, into the menubar */
+				.button.play {
+					position: absolute;
+					top: 0;
+				}
+				
+				/* this is a new added item that toggles the menu */
+				.mobile-menu-toggle {
+					position: absolute;
+					top: 0;
+					right: 10px;
+					transition: all 120ms ease;
+				}
+
+				header.expanded {
+					height: auto;
+				}
+
+				header.expanded .mobile-menu-toggle {
+					transform: rotate(180deg);
 				}
 			}
 		</style>
