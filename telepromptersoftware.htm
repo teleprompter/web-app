@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>Free Teleprompter Software - Voice Activated Online Teleprompter [2020]</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+
+
+		<meta name="author" content="Teleprompter Mirror">
+		<meta name="description" content="Free online teleprompter software with voice activated scrolling. Runs in browser or download it for PC, Mac, iOS, or Android.">
+
+		<!-- Mobile Specific Meta Tags -->
+		<!-- <meta name="viewport" content="width=1024, initial-scale=1, maximum-scale=1"> -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/redmond/jquery-ui.css" />
+		<link rel="stylesheet" href="css/style.css?v=0.6.1">
+		<link href="/css/all.css" rel="stylesheet"> <!--load all styles -->
+		
+		<script src="https://kit.fontawesome.com/650710d258.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+  
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-8235067-2"></script>
+			<script>
+			  window.dataLayer = window.dataLayer || [];
+			  function gtag(){dataLayer.push(arguments);}
+			  gtag('js', new Date());
+
+			  gtag('config', 'UA-8235067-2');
+			</script>
+			<style>
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+a:hover, a:active, a:focus {
+  color:#add8e6;
+  text-decoration: none;
+}
+</style><link rel="shortcut icon" href="teleprompter-favicon.ico">
+
+
+
+	</head>
+	<body id="gui">
+		<header>
+			<h1><a href="voice-activated-teleprompter/"><i class="fas fa-microphone active"></i></a><i class="fal fa-clock play"></i> <span class="clock">00:00:00</span></h1>
+			<nav>
+                <div class="buttons">
+					
+					
+					<a class="button small fad fa-undo reset" href="#" onclick="return false;"></a>
+					<a class="button small fal fa-text-width flipx" href="#" onclick="return false;"></a>
+					<a class="button small fal fa-text-height flipy" href="#" onclick="return false;"></a>
+					<a class="button icon-play play active" href="#" onclick="return false;"></a>
+					<a class="button fad fa-folder-open open active" href="#" onclick="return false;"></a>
+					<a class="button fal fa-save save active" href="#" onclick="return false;"></a>
+					<span style="display: none;"><input type='file' class="load-file" accept='.txt' onchange='openFile(event)'></span>
+				</div>
+				<div class="sliders">
+					<label class="font_size_label">Font Color / Size <span>(60)</span>:&nbsp; <div class="font_size slider"></div></label><br>
+					<label class="speed_label">BG Color / Speed <span>(35)</span>:&nbsp; <div class="speed slider"></div></label>
+				</div>
+                <div class="colors">
+                    <input id="text-color-picker" class="color {hash:true,caps:true,valueElement:'text-color'}"><input type="hidden" id="text-color" value="#ffffff">
+                    <input id="background-color-picker" class="color {hash:true,caps:true,valueElement:'background-color'}"><input type="hidden" id="background-color" value="#141414">
+                </div>
+			</nav>
+		</header>
+		<article>
+			<div class="">
+				<div class="top"></div>
+				<div class="bottom"></div>
+			</div>
+			<div spellcheck="false" class="teleprompter" id="teleprompter" contenteditable>
+				Oh, hello there! I didn't see you come in. I was too busy reading off this Teleprompter. It does some pretty cool things:
+				<br><br>
+				You can edit your scripts on the page, or copy/paste them here from another program. 
+				<br><br>
+				Set the speed to a comfortable pace or click the microphone icon for voice activated scrolling.
+				<br><br>
+				Click the icon above to mirror flip your text (handy for everyone using our beamsplitter mirrors).
+				<br><br>
+				If you're using an iPad or Android tablet, add a shortcut to your home screen to enable full screen.
+				<br><br>
+				Looking for a teleprompter or beamsplitter mirror? Check out our selection of the best teleprompters by clicking the store icon above.
+				<br><br>
+				Use this premade script for teleprompter practice. You can simply adjust the font size and speed to practice your teleprompting.
+				<br><br>
+				Here are some handy keyboard shortcuts to help you get started: 
+				<br><br>
+				Up:  Increases Font Size
+				<br><br>
+				Down:  Decreases Font Size
+				<br><br>
+				Left:  Slows Down Teleprompter
+				<br><br>
+				Right:  Speeds Up Teleprompter
+				<br><br>
+				Space:  Starts / Stops Teleprompter
+				<br><br>
+				Escape: Resets Everything
+				<br><br>
+				F11: Fullscreen Browser (Fn+F11 on compact keyboards)
+				<br><br>
+				Having trouble with the keyboard shortcuts? Don't forget to use your mouse or touch screen to click on the script once it's running to allow keyboard input to the screen.
+				<br><br>
+				Here are a few resources I think you'll find helpful!
+				<br><br>
+				Looking to download teleprompter software? Check out our reviews of the best at <a fontcolor="white" href="https://telepromptermirror.com/software">https://telepromptermirror.com/software </a>
+				<br><br>
+				Looking to buy teleprompter or teleprompter glass? Check out our website telepromptermirror.com
+				<br><br>
+				Looking to build a cheap DIY teleprompter? We've written step-by-step instructions for you at: https://youtu.be/qnhIuDGCmNs
+				<br><br>
+				Check out the original project open source code at: https://github.com/manifestinteractive/teleprompter and dedicated website for it: https://promptr.tv
+			</div>
+			<i class="icon-play marker"></i>
+		</article>
+		<footer>
+
+		</footer>
+		<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+		<script src="js/jquery.timer.js"></script>
+		<script src="js/jquery.cookie.js"></script>
+        <script src="js/jscolor.js"></script>
+		<script src="js/script.js?v=0.6.2"></script>
+		<style>
+			/* override styles */
+
+			/* small screen -> mobile phones and portrait tablets */
+			@media screen and (max-width: 768px) {
+				#teleprompter {
+					padding-left: 40px !important;	
+					padding-right: 40px !important;	
+				}
+			}
+		</style>
+		
+	</body>
+</html>
