@@ -107,6 +107,10 @@ article .teleprompter p:last-child
 {
 	border-bottom: 1px solid #4297d7;
 }
+article .teleprompter.text-align-center
+{
+	text-align: center;
+}
 article .teleprompter.flipx
 {
 	-webkit-transform: rotateY(180deg);

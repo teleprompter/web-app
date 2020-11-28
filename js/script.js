@@ -158,6 +158,20 @@ $(function() {
 			stop_teleprompter();
 		}
 	});
+
+	// Listen for text align Button Click
+	$('.button.text-align').click(function() {
+		var isAlignedLeft = $(this).hasClass('fa-align-left');
+
+		if (isAlignedLeft) {
+			$(this).removeClass('fa-align-left').addClass('fa-align-center').attr('title', 'center text');
+		} else {
+			$(this).addClass('fa-align-left').removeClass('fa-align-center').attr('title', 'left align text');
+		}
+
+		$('.teleprompter').toggleClass('text-align-center', !isAlignedLeft);
+	});
+
 	// Listen for FlipX Button Click
 	$('.button.flipx').click(function(){
 
