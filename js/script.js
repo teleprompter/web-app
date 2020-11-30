@@ -1,5 +1,6 @@
 var initPageSpeed = 35,
 	initFontSize = 60,
+	initMargin = 60,
 	scrollDelay,
 	textColor = '#ffffff',
 	backgroundColor = '#141414',
@@ -74,6 +75,10 @@ $(function() {
 	{
 		initPageSpeed = $.cookie('teleprompter_speed');
 	}
+	if($.cookie('teleprompter_margin'))
+	{
+		initMargin = $.cookie('teleprompter_margin');
+	}
 	if($.cookie('teleprompter_text'))
 	{
 		$('#teleprompter').html($.cookie('teleprompter_text'));
@@ -119,6 +124,7 @@ $(function() {
 		slide: function(){ fontSize(true); },
 		change: function(){ fontSize(true); }
 	});
+	fontSize();
 
 	// Create Speed Slider
 	$('.speed').slider({
@@ -131,6 +137,20 @@ $(function() {
 		slide: function(){ speed(true); },
 		change: function(){ speed(true); }
 	});
+	speed();
+
+	// Create Margin Slider
+	$('.margin').slider({
+		min: 0,
+		max: 150,
+		value: initMargin,
+		orientation: "horizontal",
+		range: "min",
+		animate: true,
+		slide: function(){ margin(true); },
+		change: function(){ margin(true); }
+	});
+	margin();
 	
 	$('#text-color').change(function(){
 		var color = $(this).val();
@@ -247,6 +267,22 @@ function speed(save_cookie)
 	if(save_cookie)
 	{
 		$.cookie('teleprompter_speed', $('.speed').slider('value'));
+	}
+}
+
+// Manage Margin Change
+function margin(save_cookie)
+{
+	var marginValue = $('.margin').slider('value');
+	$('label.margin_label span').text('(' + marginValue + 'px)');
+	$('#teleprompter').css({
+		'padding-left': marginValue,
+		'padding-right': marginValue
+	});
+
+	if(save_cookie)
+	{
+		$.cookie('teleprompter_margin', marginValue);
 	}
 }
 

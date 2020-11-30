@@ -65,6 +65,7 @@ header nav
 	font-size: 12px;
 	z-index: 10;
 	height: 64px;
+	height: 84px;
 	overflow: hidden;
 }
 header nav label
@@ -86,7 +87,8 @@ body.playing article
 }
 article .teleprompter
 {
-	padding: 300px 50px 1000px 100px;
+	padding-top: 300px;
+	padding-bottom: 1000px;
 	font-size: 60px;
 	line-height: 86px;
 	z-index: 1;
@@ -119,7 +121,7 @@ article .teleprompter.flipx
 	-ms-transform: rotateY(180deg);
 	z-index: 1;
 	pointer-events: none;
-	padding: 300px 50px 1000px 100px !important;
+	/* padding: 300px 50px 1000px 100px !important; */
 }
 article .teleprompter.flipy
 {
@@ -129,7 +131,7 @@ article .teleprompter.flipy
 	-ms-transform: rotateX(180deg);
 	z-index: 1;
 	pointer-events: none;
-	padding: 1000px 50px 300px 100px !important;
+	/* padding: 1000px 50px 300px 100px !important; */
 }
 article .teleprompter.flipxy
 {
@@ -139,7 +141,7 @@ article .teleprompter.flipxy
 	-ms-transform: rotateX(180deg) rotateY(180deg);
 	z-index: 1;
 	pointer-events: none;
-	padding: 1000px 50px 300px 100px !important;
+	/* padding: 1000px 50px 300px 100px !important; */
 }
 .sliders, .buttons, .colors
 {
