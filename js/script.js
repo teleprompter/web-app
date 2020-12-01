@@ -1,6 +1,6 @@
 var initPageSpeed = 35,
 	initFontSize = 60,
-	initMargin = 60,
+	initMargin = 2,
 	scrollDelay,
 	textColor = '#ffffff',
 	backgroundColor = '#141414',
@@ -75,9 +75,9 @@ $(function() {
 	{
 		initPageSpeed = $.cookie('teleprompter_speed');
 	}
-	if($.cookie('teleprompter_margin'))
+	if($.cookie('teleprompter_padding'))
 	{
-		initMargin = $.cookie('teleprompter_margin');
+		initMargin = $.cookie('teleprompter_padding');
 	}
 	if($.cookie('teleprompter_text'))
 	{
@@ -142,7 +142,7 @@ $(function() {
 	// Create Margin Slider
 	$('.margin').slider({
 		min: 0,
-		max: 150,
+		max: 50,
 		value: initMargin,
 		orientation: "horizontal",
 		range: "min",
@@ -284,15 +284,16 @@ function speed(save_cookie)
 function margin(save_cookie)
 {
 	var marginValue = $('.margin').slider('value');
-	$('label.margin_label span').text('(' + marginValue + 'px)');
+	var formattedMarginValue = marginValue + '%'
+	$('label.margin_label span').text('(' + formattedMarginValue + ')');
 	$('#teleprompter').css({
-		'padding-left': marginValue,
-		'padding-right': marginValue
+		'padding-left': formattedMarginValue,
+		'padding-right': formattedMarginValue
 	});
 
 	if(save_cookie)
 	{
-		$.cookie('teleprompter_margin', marginValue);
+		$.cookie('teleprompter_padding', marginValue);
 	}
 }
 
