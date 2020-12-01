@@ -194,10 +194,15 @@ $(function() {
 
 	// Listen for FlipX Button Click
 	$('.button.flipx').click(function(){
+		timer.resetTimer();
 
-    timer.resetTimer();
+		// there is a bug in chrome where toggling a 3d transform via a css class
+		// doesn't automatically re-render the component
+		// the quick and dirty fix is to hide the element and show it after the transform has been applied 🤷‍♂️
+		// so, here it is:
+		$('.teleprompter').hide();
 
-    if($('.teleprompter').hasClass('flipy'))
+		if($('.teleprompter').hasClass('flipy'))
 		{
 			$('.teleprompter').removeClass('flipy').toggleClass('flipxy');
 		}
@@ -205,6 +210,11 @@ $(function() {
 		{
 			$('.teleprompter').toggleClass('flipx');
 		}
+
+		setTimeout(() => {
+			// and now show the element
+			$('.teleprompter').show();
+		});
 	});
 	// Listen for FlipY Button Click
 	$('.button.flipy').click(function(){
