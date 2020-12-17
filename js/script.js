@@ -106,6 +106,17 @@ $(function() {
 	$('#teleprompter').keyup(update_teleprompter);
 	$('body').keydown(navigate);
 
+	$('#teleprompter').on('paste', function(e) {
+		// cancel paste
+		e.preventDefault();
+	
+		// get text representation of clipboard
+		var text = (e.originalEvent || e).clipboardData.getData('text/plain');
+	
+		// insert text manually
+		document.execCommand('insertHTML', false, text);
+	});
+
 	// Setup GUI
 	$('article').stop().animate({scrollTop: 0}, 100, 'linear', function(){ $('article').clearQueue(); });
 	$('.marker, .overlay').fadeOut(0);
