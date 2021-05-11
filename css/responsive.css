@@ -1,9 +1,17 @@
 /* elements with this class will only be visible on small screens */
+.mopbile-hidden {
+  display: initial !important;
+}
+
 .mobile-only {
   display: none !important;
 }
 
-/* small screen -> mobile phones and portrait tablets */
+.small-screen-only {
+  display: none !important;
+}
+
+/* large screens */
 @media screen and (min-width: 1024px) {
   header, nav, .sliders, .buttons, .colors {
     height: 84px;
@@ -25,7 +33,7 @@
 
 /* small screen -> mobile phones and portrait tablets */
 @media screen and (max-width: 1024px) {
-  .mobile-only {
+  .small-screen-only {
     display: initial !important;
   }
 
@@ -80,5 +88,81 @@
 
   header.expanded .mobile-menu-toggle {
     transform: rotate(180deg);
+  }
+
+  header nav .colors label {
+    margin: 0;
+  }
+}
+
+/* mobile only */
+@media screen and (max-width: 768px) {
+  .mobile-only {
+    display: initial !important;
+  }
+
+  .mobile-hidden {
+    display: none !important;
+  }
+
+  header {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  header.expanded {
+    height: 100vh;
+  }
+
+  header h1 {
+    background: #141414;
+  }
+
+  header nav {
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    height: auto;
+  }
+
+  header nav > * {
+    float: none;
+    clear: both;
+  }
+
+  header nav .buttons {
+    display: flex;
+    align-items: unset;
+    justify-content: space-around;
+    height: 60px;
+    padding: 0;
+    margin: 0 !important;
+  }
+
+  header nav .buttons .button.play {
+    right: 60px;
+  }
+
+  header nav .sliders {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    align-items: center;
+    float: none;
+    height: auto;
+  }
+
+  header nav .colors {
+    display: flex;
+    font-size: 1rem;
+    height: auto;
+    float: none;
+    clear: both;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  header nav .colors label {
+    margin: 10px 0;
   }
 }

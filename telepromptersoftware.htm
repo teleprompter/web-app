@@ -63,26 +63,32 @@ a:hover, a:active, a:focus {
 				<span class="clock">00:00:00</span>
 			</h1>
 			<nav>
-                <div class="buttons">
+				<div class="buttons">
 					<a class="button small fad fa-undo reset" href="#" onclick="return false;"></a>
 					<a class="button small fal fa-align-center text-align" title="center text" href="#" onclick="return false;"></a>
 					<a class="button small fal fa-text-width flipx" href="#" onclick="return false;"></a>
 					<a class="button small fal fa-text-height flipy" href="#" onclick="return false;"></a>
 					<a class="button icon-play play active" href="#" onclick="return false;"></a>
-					<a class="button mobile-only mobile-menu-toggle fad fa-chevron-down" title="toggle menu" href="#" onclick="$('header').toggleClass('expanded'); return false;"></a>
+					<a class="button small-screen-only mobile-menu-toggle fad fa-chevron-down" title="toggle menu" href="#" onclick="$('header').toggleClass('expanded'); return false;"></a>
 					<a class="button fad fa-folder-open open active" href="#" onclick="return false;"></a>
 					<a class="button fal fa-save save active" href="#" onclick="return false;"></a>
 					<span style="display: none;"><input type='file' class="load-file" accept='.txt' onchange='openFile(event)'></span>
 				</div>
 				<div class="sliders">
-					<label class="font_size_label">Font Color / Size <span>(60)</span>:&nbsp; <div class="font_size slider"></div></label><br>
-					<label class="speed_label">BG Color / Speed <span>(35)</span>:&nbsp; <div class="speed slider"></div></label><br>
+					<label class="font_size_label">Font <span class="mobile-hidden">Color / </span>Size <span>(60)</span>:&nbsp; <div class="font_size slider"></div></label><br>
+					<label class="speed_label">BG <span class="mobile-hidden">Color / </span> Speed <span>(35)</span>:&nbsp; <div class="speed slider"></div></label><br>
 					<label class="margin_label">Margin <span>(35)</span>:&nbsp; <div class="margin slider"></div></label>
 				</div>
-                <div class="colors">
-                    <input id="text-color-picker" class="color {hash:true,caps:true,valueElement:'text-color'}"><input type="hidden" id="text-color" value="#ffffff">
-                    <input id="background-color-picker" class="color {hash:true,caps:true,valueElement:'background-color'}"><input type="hidden" id="background-color" value="#141414">
-                </div>
+				<div class="colors">
+					<label class="no-margin">
+						<span class="mobile-only">Font Color</span>
+						<input id="text-color-picker" class="color {hash:true,caps:true,valueElement:'text-color'}"><input type="hidden" id="text-color" value="#ffffff">
+					</label>
+					<label class="no-margin">
+						<span class="mobile-only">Background Color</span>
+						<input id="background-color-picker" class="color {hash:true,caps:true,valueElement:'background-color'}"><input type="hidden" id="background-color" value="#141414">
+					</label>
+				</div>
 			</nav>
 		</header>
 		<article>
