@@ -1,3 +1,11 @@
+$.cookie = function(key, value) {
+	if (value === undefined) {
+		return localStorage.getItem(key);
+	}
+
+	return localStorage.setItem(key, value);
+}
+
 var initPageSpeed = 35,
 	initFontSize = 60,
 	initMargin = 2,
@@ -43,6 +51,7 @@ $(function() {
 		evt.stopPropagation();
 		return false;
 	});
+
 	function saveTextAsFile()
 	{
 		var node = document.getElementById('teleprompter');
@@ -106,15 +115,24 @@ $(function() {
 	$('#teleprompter').keyup(update_teleprompter);
 	$('body').keydown(navigate);
 
+	$('.button.paste-toggle').click(function(evt) {
+		var initialValue = $.cookie('teleprompter_paste-rich-text');
+		var newValue = (!initialValue || initialValue === 'false') ? true : false
+		$.cookie('teleprompter_paste-rich-text', newValue);
+	});
+
 	$('#teleprompter').on('paste', function(e) {
-		// cancel paste
-		e.preventDefault();
-	
-		// get text representation of clipboard
-		var text = (e.originalEvent || e).clipboardData.getData('text/plain');
-	
-		// insert text manually
-		document.execCommand('insertHTML', false, text);
+		var shouldPasteAsRichText = $.cookie('teleprompter_paste-rich-text');
+		if (shouldPasteAsRichText !== 'true') {
+			// cancel paste
+			e.preventDefault();
+		
+			// get text representation of clipboard
+			var text = (e.originalEvent || e).clipboardData.getData('text/plain');
+		
+			// insert text manually
+			document.execCommand('insertHTML', false, text);
+		}
 	});
 
 	// Setup GUI

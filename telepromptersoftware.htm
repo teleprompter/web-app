@@ -4,8 +4,8 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-		<title>Free Teleprompter Software - Voice Activated Online Teleprompter [2020]</title>
-		
+		<title>Free Teleprompter Software - Voice Activated Online Teleprompter [2021]</title>
+
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
 
 
@@ -19,13 +19,13 @@
 
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/redmond/jquery-ui.css" />
-		<link rel="stylesheet" href="css/style.css?v=0.6.1">
-		<link href="/css/all.css" rel="stylesheet"> <!--load all styles -->
-		<link href="/css/responsive.css" rel="stylesheet"> <!--load the responsive overrides -->
-		
+		<link rel="stylesheet" href="./css/style.css?v=0.6.1">
+		<link href="./css/all.css" rel="stylesheet"> <!--load all styles -->
+		<link href="./css/responsive.css" rel="stylesheet"> <!--load the responsive overrides -->
+
 		<script src="https://kit.fontawesome.com/650710d258.js" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="/css/font-awesome.min.css">
-  
+		<link rel="stylesheet" href="./css/font-awesome.min.css">
+
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-8235067-2"></script>
 			<script>
@@ -56,22 +56,19 @@ a:hover, a:active, a:focus {
 	<body id="gui">
 		<header>
 			<h1>
-				<a href="voice-activated-teleprompter/">
-					<i class="fas fa-microphone active"></i>
-				</a>
-				<i class="fal fa-clock play"></i>
-				<span class="clock">00:00:00</span>
-			</h1>
+				<a href="voice-activated-teleprompter/"><i title="Switch To Voice Activated Teleprompter" class="fas fa-microphone active"></i></a><!--<i class="fal fa-clock play"></i>--> <span style="color:lightgreen"class="clock">00:00:00</span></h1>
 			<nav>
 				<div class="buttons">
-					<a class="button small fad fa-undo reset" href="#" onclick="return false;"></a>
-					<a class="button small fal fa-align-center text-align" title="center text" href="#" onclick="return false;"></a>
-					<a class="button small fal fa-text-width flipx" href="#" onclick="return false;"></a>
-					<a class="button small fal fa-text-height flipy" href="#" onclick="return false;"></a>
-					<a class="button icon-play play active" href="#" onclick="return false;"></a>
-					<a class="button small-screen-only mobile-menu-toggle fad fa-chevron-down" title="toggle menu" href="#" onclick="$('header').toggleClass('expanded'); return false;"></a>
-					<a class="button fad fa-folder-open open active" href="#" onclick="return false;"></a>
-					<a class="button fal fa-save save active" href="#" onclick="return false;"></a>
+					<a class="button small fal fa-book" title="Instructions" href="https://youtu.be/MQf3zjzgisw" onclick="return true;"></a>
+          <a class="button small fal fa-file-import paste-toggle" title="Toggle between pasting rich or plain text" href="#" onclick="return false;"></a>
+					<a class="button small fal fa-align-center text-align" title="Center Text" href="#" onclick="return false;"></a>
+					<a class="button small fad fa-undo reset" title="Rewind To Start" href="#" onclick="return false;"></a>
+					<a class="button small fal fa-text-width flipx" title="Mirror Flip" href="#" onclick="return false;"></a>
+					<a class="button small fal fa-text-height flipy" title="Vertical Flip" href="#" onclick="return false;"></a>
+					<a style="color:lightgreen" class="button icon-play play active" href="#" title="Play/Pause" onclick="return false;"></a>
+					<a class="button mobile-only mobile-menu-toggle fad fa-chevron-down" title="toggle menu" href="#" onclick="$('header').toggleClass('expanded'); return false;"></a>
+					<a class="button fal fa-folder-open open active" title="Open File" href="#" onclick="return false;"></a>
+					<a class="button fal fa-save save active" href="#" title="Save Script" onclick="return false;"></a>
 					<span style="display: none;"><input type='file' class="load-file" accept='.txt' onchange='openFile(event)'></span>
 				</div>
 				<div class="sliders">
@@ -97,21 +94,52 @@ a:hover, a:active, a:focus {
 				<div class="bottom"></div>
 			</div>
 			<div spellcheck="false" class="teleprompter" id="teleprompter" contenteditable>
-				Oh, hello there! I didn't see you come in. I was too busy reading off this Teleprompter. It does some pretty cool things:
+				Teleprompter software allows you to read your lines <i>quickly and without mistakes</i>. Choose between automatic scrolling and voice-activated scrolling, which follows your voice as you talk. 
 				<br><br>
-				You can edit your scripts on the page, or copy/paste them here from another program. 
+				<font color="009DFF">HOW TO USE:</font> Simply copy/paste your script into this window, adjust the font size and speed, and press the play button <i style="color:lightgreen" class="button fas fa-play" aria-hidden="true"></i> at the top. If you're reading your script on a teleprompter, the 'Horizontal Flip' <i style="color:white" class="button fal fa-text-width" aria-hidden="true"></i> button at the top flips your script to a mirror image. Read through our instructions below to learn about the features and hotkeys. 
 				<br><br>
-				Set the speed to a comfortable pace or click the microphone icon for voice activated scrolling.
+				<font color="009DFF">FREE TELEPROMPTER:</font> The software is free, with no trial periods, upgrades, or limitations. If you need help or have feature requests, simply email support@telepromptermirror.com (don't forget to check out our instructions <i style="color:white" class="button fal fa-book" aria-hidden="true"></i> at the top first!).
 				<br><br>
-				Click the icon above to mirror flip your text (handy for everyone using our beamsplitter mirrors).
+				<font color="009DFF">LANGUAGE SUPPORT:</font> Multilingual support--you can use non-English characters, even Kanji. 
 				<br><br>
-				If you're using an iPad or Android tablet, add a shortcut to your home screen to enable full screen.
+				<font color="009DFF">VIDEO INSTRUCTIONS:</font> Click the icon above for our video instructions or navigate to: https://youtu.be/MQf3zjzgisw
 				<br><br>
-				Looking for a teleprompter or beamsplitter mirror? Check out our selection of the best teleprompters by clicking the store icon above.
+				<font color="009DFF">MOBILE DEVICES:</font> On mobile devices, press the 'Menu' icon <i style="color:cyan" class="button fad fa-chevron-down" aria-hidden="true"></i> to access the controls.
 				<br><br>
-				Use this premade script for teleprompter practice. You can simply adjust the font size and speed to practice your teleprompting.
+				<font color="009DFF">BOOKMARKING:</font> In case you need to return to this page for teleprompting, bookmark this page (CTRL+D). 
 				<br><br>
-				Here are some handy keyboard shortcuts to help you get started: 
+				
+				<font color="009DFF">FONT COLORS & IMAGES:</font> Font color and images are enabled by clicking on the <i style="color:white" class="button fal fa-file-import" aria-hidden="true"></i> icon at the top for rich text copy/pasting. With this mode on, you can write your teleprompter script in another program such as Word or another editor, then copy/paste it into this screen with your formatting preserved.
+				<br><br>
+				
+				<font color="009DFF">ZOOM TELEPROMPTER:</font> In addition to recording videos and making speeches, teleprompter software can be used with Zoom, Microsoft Teams, Skype, and other meeting software to read your notes while making direct eye contact. By outlining what you're going to say in advance, you can streamline your meetings and deliver accurate, detailed information. 
+
+				<br><br>
+
+				<font color="009DFF">WEB BROWSER TELEPROMPTER:</font> It runs in your browser, so there's no need to download or install anything. If you prefer to download teleprompter software, check out TeleprompterMirror.com/software/
+				<br><br>
+				<font color="009DFF">TABLETS, CELL PHONES, & LAPTOPS:</font> In addition to running on a desktop PC, the software automatically adjusts to your screen size on smaller devices. When editing your script on cell phones and tablets, you'll find it helpful to sync a bluetooth keyboard or plug it into the USB port of your cell phone, tablet, or iPad. Adding a touchpad keyboard or mouse makes it even easier to edit your script.
+				<br><br>
+				<font color="009DFF">VOICE ACTIVATED SCROLLING:</font> Activate it in the Chrome browser by clicking the microphone button <i style="color:white" class="button fas fa-microphone" aria-hidden="true"></i> above. The voice activated software is a separate webpage, so you can copy/paste your script again there.
+				<br><br>
+				<font color="009DFF">PRIVACY & SECURITY:</font> Text is only stored locally on your web browser, so scripts aren't uploaded to a server.
+				<br><br>
+				<font color="009DFF">UPDATES:</font> We're constantly updating the code to add new features, fix bugs, and provide instructions. This version was released on January 14th, 2021.
+				<br><br>
+				<font color="009DFF">HOW TO LOAD SCRIPTS:</font> Copying/pasting can be done in Windows with CTRL+C / CTRL+V and on Mac with Command+C / Command+V. Looking to paste as plain text with no formatting? In Windows, the hotkey is Ctrl+Alt+V and on Mac it's Option+Shift+Command+V. Alternatively, you can also right click and select paste as plain text.
+				<br><br>
+				<font color="009DFF">EDITING & SAVING:</font> You can edit your scripts on this page, or use copy/paste to load them from another program. Use the save and load buttons to save it to your computer for later.
+				<br><br>
+				<font color="009DFF">TELEPROMPTER PRACTICE:</font> Need teleprompter practice? Press play right now to start practicing with this pre-written script. You can adjust the font size and speed to practice your teleprompting.
+				<br><br>
+				<font color="009DFF">SPEED:</font> Set the speed to a comfortable pace or click the microphone icon above for voice activated scrolling.
+				<br><br>
+				<font color="009DFF">MIRROR FLIP:</font> Click the icon above to mirror flip your text (handy when using beamsplitter mirrors). Looking for a teleprompter or beamsplitter mirror? Check out our website, TeleprompterMirror.com
+				<br><br>
+				<font color="009DFF">OPERATING SYSTEMS:</font> Works on Windows, Mac, iPad, Android, Linux, and more. If you're using an iPad or Android tablet, add a shortcut to your home screen to enable full screen.
+				
+				<br><br>
+				<font color="009DFF">KEYBOARD SHORTCUTS:</font> Here are some useful keyboard shortcuts to control your teleprompter: 
 				<br><br>
 				Up:  Increases Font Size
 				<br><br>
@@ -123,21 +151,36 @@ a:hover, a:active, a:focus {
 				<br><br>
 				Space:  Starts / Stops Teleprompter
 				<br><br>
-				Escape: Resets Everything
+				Escape: Rewinds your script back to the start 
 				<br><br>
 				F11: Fullscreen Browser (Fn+F11 on compact keyboards)
 				<br><br>
 				Having trouble with the keyboard shortcuts? Don't forget to use your mouse or touch screen to click on the script once it's running to allow keyboard input to the screen.
 				<br><br>
-				Here are a few resources I think you'll find helpful!
+				<font color="009DFF">TIPS:</font> The voice activated and non-voice activated versions of this software are actually two separate pages, so if you're switching between them, you'll simply need to copy and paste your script.
 				<br><br>
-				Looking to download teleprompter software? Check out our reviews of the best at <a fontcolor="white" href="https://telepromptermirror.com/software">https://telepromptermirror.com/software </a>
+				<font color="#00FF7E">READY? START TELEPROMPTING!</font> 
 				<br><br>
-				Looking to buy teleprompter or teleprompter glass? Check out our website telepromptermirror.com
+				<font color="009DFF">ABOUT US:</font> And now, a message from our sponsors--us! A lot of you have been asking how I've recorded hundreds of YouTube videos. Right now, I’m standing in front of a chromakey backdrop. By combining a green screen with a teleprompter, I’m able to script all my lines in advance, adding the visuals in post processing.
 				<br><br>
-				Looking to build a cheap DIY teleprompter? We've written step-by-step instructions for you at: https://youtu.be/qnhIuDGCmNs
+				I'm going to let you in on a secret: a teleprompter is simply a beamsplitter mirror that displays my script in front of a camera. Using a teleprompter allows me to thoroughly research detailed scripts in advance and deliver them effortlessly.
 				<br><br>
-				Check out the original project open source code at: https://github.com/manifestinteractive/teleprompter and dedicated website for it: https://promptr.tv
+				The magic is in the highly transparent mirror, which provides tint-free visibility for my camera to record through. Because my script is in front of the camera lens, I can keep direct eye contact with my audience.
+				<br><br>
+				Hi, I'm Krista, videographer, actress, and anything else I want to be when using my teleprompter! I made this program to help you deliver your lines quickly and confidently on camera.
+				<br><br>
+				I hope you enjoy it and find it useful for sharing your message with the world!
+
+				<br><br>
+				<font color="009DFF">DOWNLOAD TELEPROMPTER SOFTWARE:</font><br>
+				Looking to download teleprompter software? Check out our reviews at <a fontcolor="white" href="https://telepromptermirror.com/software/">https://telepromptermirror.com/software/ </a>
+				<br><br>
+				Looking to buy a teleprompter or teleprompter glass? Check out our website telepromptermirror.com
+				<br><br>
+				Looking to build a professional DIY teleprompter? We've written step-by-step instructions for you at: <font color="#00FF7E">https://youtu.be/qnhIuDGCmNs</font>
+				<br><br>
+				
+				Do you have a feature you'd like to see added? A bug which you'd like to report? Write us your suggestions at support@telepromptermirror.com
 			</div>
 			<i class="icon-play marker"></i>
 		</article>
@@ -146,9 +189,8 @@ a:hover, a:active, a:focus {
 		</footer>
 		<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
 		<script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-		<script src="js/jquery.timer.js"></script>
-		<script src="js/jquery.cookie.js"></script>
-        <script src="js/jscolor.js"></script>
-		<script src="js/script.js?v=0.6.2"></script>
+		<script src="./js/jquery.timer.js"></script>
+		<script src="./js/jscolor.js"></script>
+		<script src="./js/script.js?v=0.6.2"></script>
 	</body>
 </html>
