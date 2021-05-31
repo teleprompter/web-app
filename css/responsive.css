@@ -12,7 +12,7 @@
 }
 
 /* large screens */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   header, nav, .sliders, .buttons, .colors {
     height: 84px;
   }
