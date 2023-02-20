@@ -1,0 +1,88 @@
+/* elements with this class will only be visible on small screens */
+.mobile-only {
+  display: none !important;
+}
+
+.mobile-menu-toggle {
+  height: auto !important;
+}
+
+/* small screen -> mobile phones and portrait tablets */
+@media screen and (min-width: 1024px) {
+  h1, header, nav, .sliders, .buttons, .colors {
+    height: 84px;
+  }
+
+  header h1 {
+    margin-top: 20px;
+  }
+
+  a.button {
+    font-size: 30px !important;
+    width: 40px;
+    height: 0;
+  }
+  a.button.small {
+    font-size: 20px !important;
+  }
+}
+
+/* small screen -> mobile phones and portrait tablets */
+@media screen and (max-width: 1024px) {
+  .mobile-only {
+    display: initial !important;
+  }
+
+  a.button:not(.mobile-menu-toggle) {
+    height: 0;
+  }
+
+  .buttons {
+    height: 84px;
+  }
+
+  header {
+    overflow: hidden;
+  }
+
+  /* make the h1 flex and better align child elements  */
+  header h1 {
+    width: 100%;
+    float: none;
+    text-align: center;
+    display: flex;
+    align-items: baseline;
+    text-indent: 15px;
+  }
+
+  header h1 span.clock {
+    padding: 0;
+  }
+
+  /* make the nav full width */
+  header nav {
+    width: 100%;
+  }
+
+  /* move this one row up, into the menubar */
+  .button.play {
+    position: absolute;
+    top: 0;
+  }
+
+  /* this is a new added item that toggles the menu */
+  .mobile-menu-toggle {
+    position: absolute !important;
+    top: 0;
+    right: 10px;
+    transition: all 120ms ease;
+  }
+
+  header.expanded {
+    height: auto;
+  }
+
+  header.expanded .mobile-menu-toggle {
+    transform: rotate(180deg);
+  }
+}
