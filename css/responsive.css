@@ -32,7 +32,7 @@
 }
 
 /* small screen -> mobile phones and portrait tablets */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 0px) {
   .small-screen-only {
     display: initial !important;
   }
@@ -96,7 +96,7 @@
 }
 
 /* mobile only */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 0px) {
   .mobile-only {
     display: initial !important;
   }
